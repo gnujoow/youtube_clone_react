@@ -1,6 +1,5 @@
 import React from 'react';
 import { Component } from 'react';
-import YTSearch from 'youtube-api-search';
 
 class SearchBar extends Component {
   constructor(props) {
