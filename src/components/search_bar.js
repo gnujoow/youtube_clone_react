@@ -1,14 +1,22 @@
 import React from 'react';
 import { Component } from 'react';
+import YTSearch from 'youtube-api-search';
 
 class SearchBar extends Component {
-  onInputChange(event) {
-    console.log(event);
+  constructor(props) {
+    super(props);
+
+    this.state = { term: ''};
   }
 
   render() {
-    return <input onChange={this.onInputChange} />;
-    // return <input onChange={event => console.log(event)}
+    return (
+      <div>
+        <input onChange={event => this.setState({ term: event.target.value })} />
+        <br />
+        value of the input: { this.state.term}
+      </div>
+    );
   }
 }
 
